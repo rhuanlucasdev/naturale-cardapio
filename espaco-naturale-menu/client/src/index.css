@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+@theme {
+  --color-naturale-green-dark: #2f4f3a;
+  --color-naturale-green: #6a994e;
+  --color-naturale-cream: #f7f3e8;
+  --color-naturale-beige: #e6d5b8;
+  --color-naturale-text: #2b2118;
+  --color-naturale-warm: #bc6c25;
+  --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  color: #2b2118;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(247, 243, 232, 0.44), transparent 22rem),
+    linear-gradient(180deg, rgba(47, 79, 58, 0.76), rgba(47, 79, 58, 0.52) 38%, rgba(43, 33, 24, 0.58)),
+    linear-gradient(rgba(247, 243, 232, 0.18), rgba(230, 213, 184, 0.3)),
+    url("https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1200&q=80");
+  background-attachment: fixed;
+  background-position: center top;
+  background-size: cover;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.menu-shell {
+  background: linear-gradient(180deg, rgba(255, 251, 240, 0.94), rgba(247, 243, 232, 0.89));
+  backdrop-filter: blur(14px) saturate(1.12);
+  box-shadow: 0 22px 70px rgba(22, 30, 22, 0.24);
+}
+
+.menu-card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(255, 251, 242, 0.92));
+  box-shadow: 0 10px 32px rgba(37, 45, 34, 0.12);
+}
+
+.brand-script {
+  font-family: "Brush Script MT", "Segoe Script", "Lucida Handwriting", cursive;
+}
+
+.poster-title {
+  font-family: Impact, Haettenschweiler, "Arial Black", sans-serif;
+  letter-spacing: 0.02em;
+}
+
+.hide-scrollbar {
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.focus-ring {
+  @apply outline-none focus-visible:ring-2 focus-visible:ring-naturale-warm focus-visible:ring-offset-2 focus-visible:ring-offset-naturale-cream;
+}
+
+.field {
+  @apply w-full rounded-xl border border-naturale-beige/80 bg-white/90 px-4 py-3 text-sm text-naturale-text shadow-sm outline-none placeholder:text-naturale-text/40 focus-visible:ring-2 focus-visible:ring-naturale-warm focus-visible:ring-offset-2 focus-visible:ring-offset-naturale-cream;
+}
+
+.label {
+  @apply text-xs font-bold uppercase tracking-[0.12em] text-naturale-green-dark/70;
+}
+
+.admin-panel {
+  @apply rounded-3xl border border-white/70 bg-white/88 p-4 shadow-lg shadow-naturale-green-dark/5 backdrop-blur md:p-6;
+}
+
+.admin-surface {
+  background:
+    radial-gradient(circle at top left, rgba(106, 153, 78, 0.16), transparent 28rem),
+    linear-gradient(180deg, #f7f3e8 0%, #fffaf1 46%, #f1eadc 100%);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .soft-enter {
+    animation: soft-enter 420ms ease both;
+  }
+}
+
+@keyframes soft-enter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
