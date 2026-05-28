@@ -87,6 +87,20 @@ export default function MenuPage() {
           </div>
         )}
       </main>
+
+      <footer className="px-3 pb-5 pt-4 text-center">
+        <p className="text-xs font-bold text-white/78 drop-shadow">
+          Desenvolvido por{" "}
+          <a
+            className="underline decoration-white/40 underline-offset-4 transition hover:text-white"
+            href="https://rhuanlucas.dev"
+            target="_blank"
+            rel="noreferrer"
+          >
+            @rhuanlucasdev
+          </a>
+        </p>
+      </footer>
     </div>
   );
 }
