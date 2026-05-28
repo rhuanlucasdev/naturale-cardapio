@@ -7,7 +7,7 @@ Sistema full stack para cardapio digital do restaurante **Espaco Naturale**, com
 - React + Vite
 - TailwindCSS v4 com `@tailwindcss/vite`
 - Node.js + Express
-- SQLite + Prisma ORM
+- PostgreSQL + Prisma ORM
 - JWT para autenticacao admin
 - Fetch API
 - lucide-react
@@ -59,10 +59,17 @@ http://localhost:3333
 Arquivo `server/.env.example`:
 
 ```env
-DATABASE_URL="file:./dev.db"
+DATABASE_URL="postgresql://USER:PASSWORD@HOST:PORT/DATABASE?schema=public"
 PORT=3333
 JWT_SECRET="change-me"
 ADMIN_PASSWORD="admin123"
+```
+
+Para deploy em producao, use uma URL PostgreSQL real no `DATABASE_URL` e rode:
+
+```bash
+npm run migrate:deploy
+npm run seed
 ```
 
 ## Configuracao do front-end
